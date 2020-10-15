@@ -226,8 +226,8 @@ namespace SinaFinance_7X24
                             pq_p = pq_p.TrimEnd('0');
                         }
                         pq = pq_v + "(" + pq_p + "%)";
-                    }
-                    SetListViewValue(listview, index, value + "(" + p + "%)", pq);
+                    }                    
+                    SetListViewValue(listview, index, value + "(" + p + "%)", pq, Convert.ToDecimal(p));
                 }
 
             }
@@ -258,15 +258,16 @@ namespace SinaFinance_7X24
             }
         }
 
-        private void SetListViewValue(ListView listview, int index, string value, string pq = "")
+        private void SetListViewValue(ListView listview, int index, string value, string pq = "", decimal v_c = 0)
         {
             if(listview.InvokeRequired)
             {
-                Action<ListView, int, string, string> act = SetListViewValue;
-                listview.Invoke(act, listview, index, value, pq);
+                Action<ListView, int, string, string, decimal> act = SetListViewValue;
+                listview.Invoke(act, listview, index, value, pq, v_c);
             }
             else
             {
+                listview.Items[index].ForeColor = v_c > 0 ? Color.Red : v_c < 0 ? Color.Green : Color.Black;
                 listview.Items[index].SubItems[1].Text = value;
                 if(pq != "")
                 {
