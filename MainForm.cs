@@ -111,8 +111,7 @@ namespace SinaFinance_7X24
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
+            
         }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
@@ -231,6 +230,12 @@ namespace SinaFinance_7X24
         private void 关闭ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 

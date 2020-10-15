@@ -22,6 +22,8 @@ namespace SinaFinance_7X24
             this.Hide();
             this.LoadShares();
             GetSharesValue();
+            toolTip1.SetToolTip(button1, "开始监听");
+            toolTip1.SetToolTip(button2, "开始监听");
         }
 
         private void LoadShares()
@@ -212,6 +214,7 @@ namespace SinaFinance_7X24
                     {
                         p = p.TrimEnd('0');
                     }
+                    decimal c_p = Convert.ToDecimal(p);
                     string pq = "";
                     if(listview.Name == "listView2")
                     {
@@ -226,8 +229,9 @@ namespace SinaFinance_7X24
                             pq_p = pq_p.TrimEnd('0');
                         }
                         pq = pq_v + "(" + pq_p + "%)";
+                        c_p = Convert.ToDecimal(pq_p);
                     }                    
-                    SetListViewValue(listview, index, value + "(" + p + "%)", pq, Convert.ToDecimal(p));
+                    SetListViewValue(listview, index, value + "(" + p + "%)", pq, c_p);
                 }
 
             }
@@ -282,11 +286,13 @@ namespace SinaFinance_7X24
             {
                 refreshUs = false;
                 button1.Text = "R";
+                toolTip1.SetToolTip(button1, "开始监听");
             }
             else
             {
                 refreshUs = true;
                 button1.Text = "S";
+                toolTip1.SetToolTip(button1, "停止监听");
             }
         }
 
@@ -296,11 +302,13 @@ namespace SinaFinance_7X24
             {
                 refreshHk = false;
                 button2.Text = "R";
+                toolTip1.SetToolTip(button2, "开始监听");
             }
             else
             {
                 refreshHk = true;
                 button2.Text = "S";
+                toolTip1.SetToolTip(button2, "停止监听");
             }
         }
     }
