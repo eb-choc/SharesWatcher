@@ -52,6 +52,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -109,6 +111,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_hk_new);
             this.groupBox1.Controls.Add(this.txt_hk_shares_code);
@@ -133,7 +136,7 @@
             // 
             // btn_hk_new
             // 
-            this.btn_hk_new.Location = new System.Drawing.Point(20, 145);
+            this.btn_hk_new.Location = new System.Drawing.Point(20, 160);
             this.btn_hk_new.Name = "btn_hk_new";
             this.btn_hk_new.Size = new System.Drawing.Size(111, 38);
             this.btn_hk_new.TabIndex = 2;
@@ -143,7 +146,7 @@
             // 
             // txt_hk_shares_code
             // 
-            this.txt_hk_shares_code.Location = new System.Drawing.Point(20, 91);
+            this.txt_hk_shares_code.Location = new System.Drawing.Point(20, 116);
             this.txt_hk_shares_code.Name = "txt_hk_shares_code";
             this.txt_hk_shares_code.Size = new System.Drawing.Size(157, 35);
             this.txt_hk_shares_code.TabIndex = 1;
@@ -151,7 +154,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 51);
+            this.label1.Location = new System.Drawing.Point(16, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 24);
             this.label1.TabIndex = 0;
@@ -199,6 +202,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btn_us_add);
             this.groupBox2.Controls.Add(this.txt_us_shares_code);
@@ -223,7 +227,7 @@
             // 
             // btn_us_add
             // 
-            this.btn_us_add.Location = new System.Drawing.Point(20, 145);
+            this.btn_us_add.Location = new System.Drawing.Point(20, 160);
             this.btn_us_add.Name = "btn_us_add";
             this.btn_us_add.Size = new System.Drawing.Size(111, 38);
             this.btn_us_add.TabIndex = 2;
@@ -233,7 +237,7 @@
             // 
             // txt_us_shares_code
             // 
-            this.txt_us_shares_code.Location = new System.Drawing.Point(20, 91);
+            this.txt_us_shares_code.Location = new System.Drawing.Point(20, 116);
             this.txt_us_shares_code.Name = "txt_us_shares_code";
             this.txt_us_shares_code.Size = new System.Drawing.Size(157, 35);
             this.txt_us_shares_code.TabIndex = 1;
@@ -241,7 +245,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 51);
+            this.label2.Location = new System.Drawing.Point(16, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 24);
             this.label2.TabIndex = 0;
@@ -281,6 +285,36 @@
             // 
             this.columnHeader5.Text = "盘前";
             this.columnHeader5.Width = 110;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "300",
+            "500",
+            "1000"});
+            this.comboBox1.Location = new System.Drawing.Point(20, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(95, 32);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "300",
+            "500",
+            "1000"});
+            this.comboBox2.Location = new System.Drawing.Point(20, 29);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(95, 32);
+            this.comboBox2.TabIndex = 6;
             // 
             // tipForm
             // 
@@ -331,5 +365,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

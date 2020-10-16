@@ -16,6 +16,8 @@ namespace SinaFinance_7X24
     {
         bool refreshHk = false;
         bool refreshUs = false;
+        int refreshHkTs = 100;
+        int refreshUSTs = 100;
         public tipForm()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace SinaFinance_7X24
             GetSharesValue();
             toolTip1.SetToolTip(button1, "开始监听");
             toolTip1.SetToolTip(button2, "开始监听");
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
         }
 
         private void LoadShares()
@@ -191,6 +195,8 @@ namespace SinaFinance_7X24
                             index++;
                         }
                     }
+                    Thread.Sleep(refreshHkTs);
+                    continue;
                 }
                 Thread.Sleep(1000);
             }
@@ -257,6 +263,8 @@ namespace SinaFinance_7X24
                             index++;
                         }
                     }
+                    Thread.Sleep(refreshUSTs);
+                    continue;
                 }
                 Thread.Sleep(1000);
             }
@@ -294,6 +302,7 @@ namespace SinaFinance_7X24
                 button1.Text = "S";
                 toolTip1.SetToolTip(button1, "停止监听");
             }
+            refreshUSTs = Convert.ToInt32(comboBox2.SelectedItem.ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -310,6 +319,7 @@ namespace SinaFinance_7X24
                 button2.Text = "S";
                 toolTip1.SetToolTip(button2, "停止监听");
             }
+            refreshHkTs = Convert.ToInt32(comboBox1.SelectedItem.ToString());
         }
     }
 }

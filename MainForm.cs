@@ -237,6 +237,12 @@ namespace SinaFinance_7X24
             this.Show();
             this.WindowState = FormWindowState.Normal;
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+        }
     }
 
     public class NewsList
