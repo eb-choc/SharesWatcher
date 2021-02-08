@@ -42,6 +42,7 @@
             this.text = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.打开监控面板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -66,21 +67,22 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.打开ToolStripMenuItem,
+            this.打开监控面板ToolStripMenuItem,
             this.关闭ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(301, 162);
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(136, 38);
-            this.打开ToolStripMenuItem.Text = "打开";
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.打开ToolStripMenuItem.Text = "打开主面板";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 关闭ToolStripMenuItem
             // 
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(136, 38);
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
             this.关闭ToolStripMenuItem.Text = "关闭";
             this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
             // 
@@ -154,6 +156,13 @@
             this.panel1.Size = new System.Drawing.Size(1485, 78);
             this.panel1.TabIndex = 2;
             // 
+            // 打开监控面板ToolStripMenuItem
+            // 
+            this.打开监控面板ToolStripMenuItem.Name = "打开监控面板ToolStripMenuItem";
+            this.打开监控面板ToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.打开监控面板ToolStripMenuItem.Text = "打开监控面板";
+            this.打开监控面板ToolStripMenuItem.Click += new System.EventHandler(this.打开监控面板ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -189,6 +198,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 打开监控面板ToolStripMenuItem;
     }
 }
 

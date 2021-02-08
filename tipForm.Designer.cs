@@ -308,7 +308,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "value";
-            this.columnHeader4.Width = 110;
+            this.columnHeader4.Width = 30;
             // 
             // columnHeader5
             // 

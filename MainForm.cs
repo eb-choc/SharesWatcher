@@ -243,6 +243,11 @@ namespace SinaFinance_7X24
             this.Show();
             this.WindowState = FormWindowState.Normal;
         }
+
+        private void 打开监控面板ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tform.Show();
+        }
     }
 
     public class NewsList

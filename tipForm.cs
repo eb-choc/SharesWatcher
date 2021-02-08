@@ -294,12 +294,14 @@ namespace SinaFinance_7X24
             {
                 refreshUs = false;
                 button1.Text = "R";
+                comboBox2.Enabled = true;
                 toolTip1.SetToolTip(button1, "开始监听");
             }
             else
             {
                 refreshUs = true;
                 button1.Text = "S";
+                comboBox2.Enabled = false;
                 toolTip1.SetToolTip(button1, "停止监听");
             }
             refreshUSTs = Convert.ToInt32(comboBox2.SelectedItem.ToString());
@@ -311,12 +313,14 @@ namespace SinaFinance_7X24
             {
                 refreshHk = false;
                 button2.Text = "R";
+                comboBox1.Enabled = true;
                 toolTip1.SetToolTip(button2, "开始监听");
             }
             else
             {
                 refreshHk = true;
                 button2.Text = "S";
+                comboBox1.Enabled = false;
                 toolTip1.SetToolTip(button2, "停止监听");
             }
             refreshHkTs = Convert.ToInt32(comboBox1.SelectedItem.ToString());
